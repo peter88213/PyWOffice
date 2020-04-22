@@ -7,8 +7,8 @@ Published under the MIT License (https://opensource.org/licenses/mit-license.php
 import sys
 import os
 
-from pywoffice.collection.collection import Collection
-from pywoffice.collection.pywoffice import PywOffice
+from pywoffice.model.collection import Collection
+from pywoffice.manager.pywoffice import PywOffice
 
 DEFAULT_CONF_PATH = '.pywriter'
 DEFAULT_FILE = 'collection.pwc'

@@ -9,16 +9,14 @@ Published under the MIT License (https://opensource.org/licenses/mit-license.php
 import os
 import unittest
 
-from pywoffice.collection.collection import Collection
+from pywoffice.model.collection import Collection
+from pywoffice.fileop.bookdesc import BookDesc
 
-from pywoffice.collection.bookdesc import BookDesc
 
+DATA_PATH = '../data'
+TEST_FILE = 'collection.pwc'
 
-TEST_PATH = os.getcwd()
-EXEC_PATH = 'yw7/'
-DATA_PATH = 'data/_collection/'
-
-TEST_FILE = EXEC_PATH + 'collection.pwc'
+os.chdir('yw7')
 
 
 def read_file(inputFile):
@@ -47,49 +45,51 @@ class devel(unittest.TestCase):
         remove_all_testfiles()
 
         try:
-            os.mkdir('yw7/yWriter Projects')
+            os.mkdir('yWriter Projects')
         except:
             pass
         try:
-            os.mkdir('yw7/yWriter Projects/The Gravity Monster.yw')
+            os.mkdir('yWriter Projects/The Gravity Monster.yw')
         except:
             pass
-        copy_file('data/yWriter Projects/The Gravity Monster.yw/The Gravity Monster.yw7',
-                  'yw7/yWriter Projects/The Gravity Monster.yw/The Gravity Monster.yw7')
+
+        copy_file(DATA_PATH + '/yWriter Projects/The Gravity Monster.yw/The Gravity Monster.yw7',
+                  'yWriter Projects/The Gravity Monster.yw/The Gravity Monster.yw7')
         try:
-            os.mkdir('yw7\yWriter Projects/The Refugee Ship.yw')
+            os.mkdir('yWriter Projects/The Refugee Ship.yw')
         except:
             pass
-        copy_file('data/yWriter Projects/The Refugee Ship.yw/The Refugee Ship.yw7',
-                  'yw7/yWriter Projects/The Refugee Ship.yw/The Refugee Ship.yw7')
+
+        copy_file(DATA_PATH + '/yWriter Projects/The Refugee Ship.yw/The Refugee Ship.yw7',
+                  'yWriter Projects/The Refugee Ship.yw/The Refugee Ship.yw7')
 
     def test_add_book(self):
         """Use Case: manage the collection/add a book to the collection."""
-        copy_file(DATA_PATH + 'create_collection.xml', TEST_FILE)
+        copy_file(DATA_PATH + '/_collection/create_collection.xml', TEST_FILE)
         myCollection = Collection(TEST_FILE)
 
         self.assertEqual(myCollection.read(),
                          'SUCCESS: 0 Books found in "' + TEST_FILE + '".')
 
         self.assertEqual(myCollection.add_book(
-            'yw7/yWriter Projects/The Gravity Monster.yw/The Gravity Monster.yw7'),
+            'yWriter Projects/The Gravity Monster.yw/The Gravity Monster.yw7'),
             'SUCCESS: "The Gravity Monster" added to the collection.')
 
         self.assertEqual(myCollection.write(),
                          'SUCCESS: Collection written to "' + TEST_FILE + '".')
 
         self.assertEqual(read_file(TEST_FILE),
-                         read_file(DATA_PATH + '/add_first_book.xml'))
+                         read_file(DATA_PATH + '/_collection/add_first_book.xml'))
 
         self.assertEqual(myCollection.add_book(
-            'yw7/yWriter Projects/The Refugee Ship.yw/The Refugee Ship.yw7'),
+            'yWriter Projects/The Refugee Ship.yw/The Refugee Ship.yw7'),
             'SUCCESS: "The Refugee Ship" added to the collection.')
 
         self.assertEqual(myCollection.write(),
                          'SUCCESS: Collection written to "' + TEST_FILE + '".')
 
         self.assertEqual(read_file(TEST_FILE),
-                         read_file(DATA_PATH + '/add_second_book.xml'))
+                         read_file(DATA_PATH + '/_collection/add_second_book.xml'))
 
 
 def main():

@@ -9,10 +9,11 @@ Published under the MIT License (https://opensource.org/licenses/mit-license.php
 import os
 import zipfile
 
-from pywriter.model.odttemplate import OdtTemplate
-from pywriter.model.odtform import *
-from pywriter.collection.series import Series
-from pywriter.collection.collection import Collection
+from pywriter.fileop.odttemplate import OdtTemplate
+from pywriter.fileop.odtform import *
+
+from pywoffice.model.series import Series
+from pywoffice.model.collection import Collection
 
 
 class OdtBookDescWriter(OdtTemplate):

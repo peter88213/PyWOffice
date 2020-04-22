@@ -2,7 +2,9 @@
 /build/
 /src/__pycache__/
 /src/pywoffice/__pycache__/
-/src/pywoffice/collection/__pycache__/
+/src/pywoffice/fileop/__pycache__/
+/src/pywoffice/manager/__pycache__/
+/src/pywoffice/model/__pycache__/
 /test/__pycache__/
 /tools/__pycache__/
 /test/yw7/

@@ -9,9 +9,10 @@ Published under the MIT License (https://opensource.org/licenses/mit-license.php
 import os
 import xml.etree.ElementTree as ET
 
-from pywoffice.collection.series import Series
-from pywoffice.collection.book import Book
 from pywriter.fileop.xform import *
+
+from pywoffice.model.series import Series
+from pywoffice.model.book import Book
 
 
 class Collection():

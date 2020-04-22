@@ -9,9 +9,10 @@ Published under the MIT License (https://opensource.org/licenses/mit-license.php
 from html.parser import HTMLParser
 
 from pywriter.fileop.hform import *
-from pywoffice.collection.htmltemplate import *
-from pywoffice.collection.series import Series
-from pywoffice.collection.collection import Collection
+
+from pywoffice.fileop.htmltemplate import *
+from pywoffice.model.series import Series
+from pywoffice.model.collection import Collection
 
 
 class BookDesc(HTMLParser):
