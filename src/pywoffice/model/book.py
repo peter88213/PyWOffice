@@ -6,7 +6,7 @@ For further information see https://github.com/peter88213/PyWOffice
 Published under the MIT License (https://opensource.org/licenses/mit-license.php)
 """
 
-from pywriter.fileop.yw7file import Yw7File
+from pywriter.yw7.yw7_file import Yw7File
 
 
 class Book():

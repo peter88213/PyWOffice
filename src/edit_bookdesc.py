@@ -12,18 +12,18 @@ import sys
 
 from pywriter.converter.cnv_runner import CnvRunner
 
-from pywoffice.fileop.odt_bookdesc_writer import OdtBookDescWriter
-from pywoffice.fileop.html_bookdesc_reader import HtmlBookDescReader
+from pywoffice.odt.bookdesc import OdtBookDesc
+from pywoffice.html.bookdesc import HtmlBookDesc
 
 
 def run(sourcePath, silentMode=True):
 
     if sourcePath.endswith('.yw7'):
-        document = OdtBookDescWriter('')
+        document = OdtBookDesc('')
         extension = 'odt'
 
     elif sourcePath.endswith('.html'):
-        document = HtmlBookDescReader('')
+        document = HtmlBookDesc('')
         extension = 'html'
 
     else:

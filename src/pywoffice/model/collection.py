@@ -9,7 +9,7 @@ Published under the MIT License (https://opensource.org/licenses/mit-license.php
 import os
 import xml.etree.ElementTree as ET
 
-from pywriter.fileop.xform import *
+from pywriter.yw7.yw7_form import *
 
 from pywoffice.model.series import Series
 from pywoffice.model.book import Book

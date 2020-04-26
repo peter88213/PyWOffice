@@ -1,4 +1,4 @@
-"""OdtBookDescWriter - Class for OpenDocument xml file generation.
+"""OdtBookDesc - Class for OpenDocument xml file generation.
 
 Part of the PyWriter project.
 Copyright (c) 2020 Peter Triesberger.
@@ -9,14 +9,13 @@ Published under the MIT License (https://opensource.org/licenses/mit-license.php
 import os
 import zipfile
 
-from pywriter.fileop.odttemplate import OdtTemplate
-from pywriter.fileop.odtform import *
+from pywriter.odt.odt_template import OdtTemplate
+from pywriter.odt.odt_form import *
 
 from pywoffice.model.series import Series
-from pywoffice.model.collection import Collection
 
 
-class OdtBookDescWriter(OdtTemplate):
+class OdtBookDesc(OdtTemplate):
     """OpenDocument xml file representation of a book series containing
     a series summary and the series' book summaries 
     """

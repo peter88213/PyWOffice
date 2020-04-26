@@ -8,13 +8,12 @@ Published under the MIT License (https://opensource.org/licenses/mit-license.php
 
 from html.parser import HTMLParser
 
-from pywriter.fileop.hform import *
+from pywriter.html.html_form import *
 
 from pywoffice.model.series import Series
-from pywoffice.model.collection import Collection
 
 
-class HtmlBookDescReader(HTMLParser):
+class HtmlBookDesc(HTMLParser):
     """HTML file representation of a book series containing
     a series summary and the series' book summaries 
     """
