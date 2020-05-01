@@ -14,7 +14,7 @@ class Book():
 
     def __init__(self, filePath):
         self.title = ''
-        self.summary = ''
+        self.desc = ''
         self.wordCount = 0
         self.letterCount = 0
         self.filePath = filePath
@@ -27,7 +27,7 @@ class Book():
         book = Yw7File(self.filePath)
         book.read()
         self.title = book.title
-        self.summary = book.summary
+        self.desc = book.desc
 
         self.wordCount = 0
         self.letterCount = 0
@@ -48,8 +48,8 @@ class Book():
             book.title = self.title
             modified = True
 
-        if self.summary != book.summary:
-            book.summary = self.summary
+        if self.desc != book.desc:
+            book.desc = self.desc
             modified = True
 
         if modified:

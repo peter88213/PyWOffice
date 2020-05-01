@@ -56,7 +56,7 @@ class Collection():
             newSeries = Series(srs.find('Title').text)
 
             if srs.find('Desc') is not None:
-                newSeries.summary = srs.find('Desc').text
+                newSeries.desc = srs.find('Desc').text
 
             newSeries.srtBooks = []
 
@@ -83,7 +83,7 @@ class Collection():
             self.books[bkId].title = boo.find('Title').text
 
             if boo.find('Desc') is not None:
-                self.books[bkId].summary = boo.find('Desc').text
+                self.books[bkId].desc = boo.find('Desc').text
     
             self.books[bkId].wordCount = str(boo.find('WordCount').text)
             self.books[bkId].letterCount = str(boo.find('LetterCount').text)
@@ -109,7 +109,7 @@ class Collection():
             bkTitle = ET.SubElement(newBook, 'Title')
             bkTitle.text = self.books[bookId].title
             bkDesc = ET.SubElement(newBook, 'Desc')
-            bkDesc.text = self.books[bookId].summary
+            bkDesc.text = self.books[bookId].desc
             bkWc = ET.SubElement(newBook, 'WordCount')
             bkWc.text = str(self.books[bookId].wordCount)
             bkLc = ET.SubElement(newBook, 'LetterCount')
@@ -125,7 +125,7 @@ class Collection():
             serTitle = ET.SubElement(newSeries, 'Title')
             serTitle.text = ser.title
             serDesc = ET.SubElement(newSeries, 'Desc')
-            serDesc.text = ser.summary
+            serDesc.text = ser.desc
             serBooks = ET.SubElement(newSeries, 'Books')
 
             for bookId in ser.srtBooks:

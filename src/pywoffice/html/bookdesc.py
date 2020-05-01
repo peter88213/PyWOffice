@@ -98,10 +98,10 @@ class BookDesc(HTMLParser):
 
         self.feed(text)
 
-        series.summary = self._seriesSummary
+        series.desc = self._seriesSummary
 
         for bkId in self._bookSummary:
-            collection.books[bkId].summary = self._bookSummary[bkId]
+            collection.books[bkId].desc = self._bookSummary[bkId]
 
         return 'SUCCESS'
 
@@ -128,14 +128,14 @@ class BookDesc(HTMLParser):
         lines = [HTML_HEADER.replace('$bookTitle$', series.title)]
         lines.append('<h1>' + series.title + '</h1>\n')
         lines.append('<div id="SERIES">\n')
-        lines.append('<p class="textbody">' + series.summary + '</p>\n')
+        lines.append('<p class="textbody">' + series.desc + '</p>\n')
         lines.append('</div>\n')
 
         for bkId in series.srtBooks:
             lines.append('<h2>' + collection.books[bkId].title + '</h2>\n')
             lines.append('<div id="BkID:' + bkId + '">\n')
             lines.append('<p class="textbody">')
-            lines.append(to_html(collection.books[bkId].summary))
+            lines.append(to_html(collection.books[bkId].desc))
             lines.append('</p>\n')
             lines.append('</div>\n')
 

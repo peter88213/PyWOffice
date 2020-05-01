@@ -96,9 +96,9 @@ class HtmlBookDesc(HTMLParser):
 
         self.feed(text)
 
-        series.summary = self._seriesSummary
+        series.desc = self._seriesSummary
 
         for bkId in self._bookSummary:
-            collection.books[bkId].summary = self._bookSummary[bkId]
+            collection.books[bkId].desc = self._bookSummary[bkId]
 
         return 'SUCCESS'

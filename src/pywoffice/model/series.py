@@ -13,7 +13,7 @@ class Series():
 
     def __init__(self, title, summary=''):
         self.title = title
-        self.summary = summary
+        self.desc = summary
         self.srtBooks = []
 
     def add_book(self, bkId):
