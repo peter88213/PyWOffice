@@ -10,7 +10,7 @@ import os
 import unittest
 
 from pywoffice.model.collection import Collection
-from pywoffice.fileop.bookdesc import BookDesc
+from pywoffice.html.bookdesc import BookDesc
 
 
 DATA_PATH = '../data'

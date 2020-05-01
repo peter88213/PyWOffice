@@ -12,8 +12,8 @@ import sys
 
 from pywriter.converter.cnv_runner import CnvRunner
 
-from pywoffice.odt.bookdesc import OdtBookDesc
-from pywoffice.html.bookdesc import HtmlBookDesc
+from pywoffice.odt.odt_bookdesc import OdtBookDesc
+from pywoffice.html.html_bookdesc import HtmlBookDesc
 
 
 def run(sourcePath, silentMode=True):

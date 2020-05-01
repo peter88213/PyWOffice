@@ -10,7 +10,7 @@ from html.parser import HTMLParser
 
 from pywriter.html.html_form import *
 
-from pywoffice.fileop.htmltemplate import *
+from pywoffice.html.htmltemplate import *
 from pywoffice.model.series import Series
 from pywoffice.model.collection import Collection
 
