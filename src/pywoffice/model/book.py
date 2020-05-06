@@ -6,7 +6,7 @@ For further information see https://github.com/peter88213/PyWOffice
 Published under the MIT License (https://opensource.org/licenses/mit-license.php)
 """
 
-from pywriter.yw7.yw7_file import Yw7File
+from pywriter.yw.yw_file import YwFile
 
 
 class Book():
@@ -24,7 +24,7 @@ class Book():
         """Open the yw7 file, read title and summary, 
         and compute word count and letter count.
         """
-        book = Yw7File(self.filePath)
+        book = YwFile(self.filePath)
         book.read()
         self.title = book.title
         self.desc = book.desc
@@ -40,7 +40,7 @@ class Book():
 
     def put_book_data(self):
         """Open the yw7 file, write title and summary."""
-        book = Yw7File(self.filePath)
+        book = YwFile(self.filePath)
         book.read()
         modified = False
 

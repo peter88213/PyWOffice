@@ -10,7 +10,7 @@ Published under the MIT License (https://opensource.org/licenses/mit-license.php
 
 import sys
 
-from pywriter.converter.cnv_runner import CnvRunner
+from pywriter.converter.yw_cnv_gui import YwCnvGui
 
 from pywoffice.odt.odt_bookdesc import OdtBookDesc
 from pywoffice.html.html_bookdesc import HtmlBookDesc
@@ -29,7 +29,7 @@ def run(sourcePath, silentMode=True):
     else:
         sys.exit('ERROR: File type is not supported.')
 
-    converter = CnvRunner(sourcePath, document,
+    converter = YwCnvGui(sourcePath, document,
                           extension, silentMode, '_books')
 
 

@@ -9,7 +9,7 @@ Published under the MIT License (https://opensource.org/licenses/mit-license.php
 import os
 import xml.etree.ElementTree as ET
 
-from pywriter.yw7.yw7_form import *
+from pywriter.yw.yw_form import *
 
 from pywoffice.model.series import Series
 from pywoffice.model.book import Book
@@ -142,7 +142,7 @@ class Collection():
             return 'ERROR: "' + self._filePath + '" is write protected.'
 
         # Postprocess the xml file created by ElementTree
-        message = xml_postprocess(self._filePath, self._cdataTags)
+        message = xml_postprocess(self._filePath, 'utf-8', self._cdataTags)
 
         if message.startswith('ERROR'):
             return message
