@@ -266,11 +266,6 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_u3MyQ5EOEeqtx4SqQAS9Eg" name="lockState">
           <type xmi:type="uml:Enumeration" href="../PyWriter/PyWriter.uml#_n8vhMDP-EeqKbaMl5EbWAw"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_u3MyRJEOEeqtx4SqQAS9Eg" name="yw7file">
-          <type xmi:type="uml:Class" href="../PyWriter/PyWriter.uml#_S2CgoCtgEeqgj_wxJ3Xgsg"/>
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_u3MyRZEOEeqtx4SqQAS9Eg"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_u3MyRpEOEeqtx4SqQAS9Eg" value="1"/>
-        </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_u3MyR5EOEeqtx4SqQAS9Eg" name="chapterDesc">
           <type xmi:type="uml:Class" href="../PyWriter/PyWriter.uml#_PFuK0DFtEeq5SLjbDFDS4A"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_u3MySJEOEeqtx4SqQAS9Eg"/>
@@ -286,11 +281,20 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_u3MyTpEOEeqtx4SqQAS9Eg"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_u3MyT5EOEeqtx4SqQAS9Eg" value="1"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_YBRlkJEdEeqF1PUFcX2t6A" name="ywfile" association="_YBOiQJEdEeqF1PUFcX2t6A">
+          <type xmi:type="uml:Class" href="../PyWriter/PyWriter.uml#_S2CgoCtgEeqgj_wxJ3Xgsg"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YBSzsJEdEeqF1PUFcX2t6A"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YBVP8JEdEeqF1PUFcX2t6A" value="1"/>
+        </ownedAttribute>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_u3MyUJEOEeqtx4SqQAS9Eg" name="update"/>
+        <nestedClassifier xmi:type="uml:Association" xmi:id="_YBOiQJEdEeqF1PUFcX2t6A" memberEnd="_YBRlkJEdEeqF1PUFcX2t6A _YBVP8ZEdEeqF1PUFcX2t6A">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_YBQXcJEdEeqF1PUFcX2t6A" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_YBQ-gJEdEeqF1PUFcX2t6A" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_YBVP8ZEdEeqF1PUFcX2t6A" name="book[bkId]" type="_u3MLMJEOEeqtx4SqQAS9Eg" association="_YBOiQJEdEeqF1PUFcX2t6A"/>
+        </nestedClassifier>
       </packagedElement>
       <packagedElement xmi:type="uml:Usage" xmi:id="_gQZ2EJEQEeqtx4SqQAS9Eg" client="_u3MLMJEOEeqtx4SqQAS9Eg" supplier="_A96gAJEPEeqtx4SqQAS9Eg"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Package" xmi:id="_AGLmwJEPEeqtx4SqQAS9Eg" name="Data types">
       <packagedElement xmi:type="uml:Class" xmi:id="_A95R4JEPEeqtx4SqQAS9Eg" name="ListOfSeries">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_A95R4ZEPEeqtx4SqQAS9Eg" name="series">
           <type xmi:type="uml:Class" href="../PyWriter/PyWriter.uml#_FZtSUDP7EeqKbaMl5EbWAw"/>
