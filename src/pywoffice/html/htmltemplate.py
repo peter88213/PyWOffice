@@ -1,7 +1,7 @@
 """Support HTML formatting.
 
 Part of the PyWriter Office project.
-Copyright (c) 2020 Peter Triesberger.
+Copyright (c) 2019, peter88213
 For further information see https://github.com/peter88213/PyWOffice
 Published under the MIT License (https://opensource.org/licenses/mit-license.php)
 """
