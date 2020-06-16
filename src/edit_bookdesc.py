@@ -3,7 +3,7 @@
 Convert yw7 book descriptions to odt with invisible chapter and scene tags.
 Convert html with invisible chapter and scene tags to yw7.
 
-Copyright (c) 2020, peter88213
+Copyright (c) 2020 Peter Triesberger
 For further information see https://github.com/peter88213/PyWOffice
 Published under the MIT License (https://opensource.org/licenses/mit-license.php)
 """
