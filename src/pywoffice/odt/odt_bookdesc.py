@@ -88,7 +88,7 @@ class OdtBookDesc(OdtTemplate):
         text = '\n'.join(lines)
 
         try:
-            with open(self._TEMPDIR + '/content.xml', 'w', encoding='utf-8') as f:
+            with open(self.TEMPDIR + '/content.xml', 'w', encoding='utf-8') as f:
                 f.write(text)
 
         except:
@@ -121,9 +121,9 @@ class OdtBookDesc(OdtTemplate):
 
         try:
             with zipfile.ZipFile(self.filePath, 'w') as odtTarget:
-                os.chdir(self._TEMPDIR)
+                os.chdir(self.TEMPDIR)
 
-                for file in self._ODT_COMPONENTS:
+                for file in self.ODT_COMPONENTS:
                     odtTarget.write(file)
         except:
             os.chdir(workdir)
