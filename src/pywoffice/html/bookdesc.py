@@ -8,8 +8,7 @@ Published under the MIT License (https://opensource.org/licenses/mit-license.php
 
 from html.parser import HTMLParser
 
-from pywriter.html.html_form import *
-
+from pywoffice.html.html_form import *
 from pywoffice.html.htmltemplate import *
 from pywoffice.model.series import Series
 from pywoffice.model.collection import Collection

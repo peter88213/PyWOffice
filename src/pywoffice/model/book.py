@@ -53,6 +53,6 @@ class Book():
             modified = True
 
         if modified:
-            book.write(book)
+            book.write()
 
         del book
