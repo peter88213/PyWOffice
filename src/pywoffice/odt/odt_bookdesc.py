@@ -42,7 +42,7 @@ class OdtBookDesc(OdtTemplate):
 
         for chId in self.srtChapters:
 
-            if (not self.chapters[chId].isUnused) and self.chapters[chId].chType == 0:
+            if (not self.chapters[chId].isUnused) and self.chapters[chId].oldType == 0:
 
                 # Write chapter heading.
 
